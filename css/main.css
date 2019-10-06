@@ -397,5 +397,61 @@ body{
 .msg-btn:hover{
 	color: var(--mainWhite);
 }
+/* Inventory Page */
 
+.inv-car-card{
+	background-image: linear-gradient(to bottom right, violet, blue);
+	border-radius: 5%!important;
+
+}
+.inv-head-text{
+	color: var(--mainWhite);
+	text-shadow: 1px 1px 5px var(--transparentBlack);
+}
+.inv-car-img{
+	border-radius: 5%!important;
+	margin: 1rem;
+	/* box-shadow: 0px 0px 5px var(--transparentBlack); */
+}
+.inv-car-value{
+	background: var(--mainWhite);
+	color: var(--mainBlue);
+	font-weight: bolder;
+	width: 100%;
+	border-radius: 10rem;
+	transition: all 0.2s linear;
+}
+
+.inv-check-card{
+	background: var(--transparentBlack);
+	border-radius: 0.5rem;
+	opacity: 1;
+	box-shadow: 0px 0px 5px var(--transparentBlack);
+	transition: all 0.5s ease-in-out;
+}
+.inv-check-icon{
+	font-size: 2rem;
+	color: var(--mainWhite);
+}
+.inv-check-text{
+	color: var(--mainWhite);
+}
+.inv-line-1{
+	width: 5rem;
+	height: 0.15rem;
+	background: var(--mainWhite);
+	margin-top: 5px;
+	box-shadow: 1px 1px 5px var(--transparentBlack);
+}
+.inv-line-2{
+	width: 3rem;
+	height: 0.15rem;
+	background: var(--mainWhite);
+	margin-top: 5px;
+	box-shadow: 1px 1px 5px var(--transparentBlack);
+}
+.inv-img-container{
+	position: relative;
+	overflow: hidden;
+}
 /* REM (Root Element) values to target root element 1REM = 16px */
