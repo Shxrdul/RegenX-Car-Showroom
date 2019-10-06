@@ -103,6 +103,7 @@
 <section id="message">
     <div class="message p-5">
         <div class="container">
+
         <form name="contact_form" action="includes/contactadd.inc.php" method="POST" onsubmit="return validate(contact_form)">
             <div class="row px-3">
                 <div class="col-6 my-3">
@@ -126,6 +127,7 @@
             </div>
             <div class="row px-3">
                 <div class="col-12 my-3">
+
                     <textarea rows="5" name="message" class="form-control form-control-lg"></textarea>
                     <h6 class="hidden-text" id="invalid_msg">*Message cannot be blank</h6>
                 </div>
@@ -141,18 +143,18 @@
 </section>
 <!-- End Message Section -->
 
+
 <!-- Form Validation -->
 <script type="text/javascript">
 function validate(myform){
 	
-	document.getElementById('invalid_name').style.visibility = 'hidden';
-	document.getElementById('invalid_pno').style.visibility = 'hidden';
-	document.getElementById('invalid_email').style.visibility = 'hidden';
-	document.getElementById('invalid_subj').style.visibility = 'hidden';
-	document.getElementById('invalid_msg').style.visibility = 'hidden';
+    document.getElementById('invalid_name').style.visibility = 'hidden';
+    document.getElementById('invalid_pno').style.visibility = 'hidden';
+    document.getElementById('invalid_email').style.visibility = 'hidden';
+    document.getElementById('invalid_subj').style.visibility = 'hidden';
+    document.getElementById('invalid_msg').style.visibility = 'hidden';
 
-
-	var regex_name =  /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+    var regex_name =  /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
     var regex_phoneno = /[7-9]{1}\d{9}/;
     var regex_emailid = /^([a-z A-z 0-9 \. _])+@([a-z A-Z 0-9])+\.([a-z A-z]){2,10}(\.([A-Z a-z]){2,10})?$/;
     var regex_subj =  /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
@@ -204,7 +206,6 @@ function validate(myform){
 
 
 <!-- End From Validation-->
-
 
 <!-- Contact Section -->
 <section id="contact">
