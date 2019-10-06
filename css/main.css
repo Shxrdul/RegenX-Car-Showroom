@@ -333,7 +333,11 @@ body{
 	font-size: 0.8rem;
 	color: grey
 }
-
+.hidden-text{
+	padding-left: 1rem;
+	color: red;
+	visibility: hidden;
+}
 
 /* Story page */
 .checkpoint{
