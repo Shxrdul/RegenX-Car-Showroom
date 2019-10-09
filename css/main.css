@@ -397,10 +397,10 @@ body{
 .msg-btn:hover{
 	color: var(--mainWhite);
 }
-/* Inventory Page */
 
+/* Inventory Page */
 .inv-car-card{
-	background-image: linear-gradient(to bottom right, violet, blue);
+	background-image: linear-gradient(to bottom right, var(--transparentBlack),var(--mainBlue));
 	border-radius: 5%!important;
 
 }
@@ -435,6 +435,7 @@ body{
 }
 .inv-check-text{
 	color: var(--mainWhite);
+	font-size: 0.7rem;
 }
 .inv-line-1{
 	width: 5rem;

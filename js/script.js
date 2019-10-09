@@ -58,6 +58,114 @@ function cvalidate(myform){
     }
 }
 
+//Contact Form Validation
+function svalidate(myform){
+	
+	document.getElementById('invalid_name').style.visibility = 'hidden';
+	document.getElementById('invalid_pno').style.visibility = 'hidden';
+	document.getElementById('invalid_email').style.visibility = 'hidden';
+	document.getElementById('invalid_msg').style.visibility = 'hidden';
+
+
+	var regex_name =  /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+    var regex_phoneno = /[7-9]{1}\d{9}/;
+    var regex_emailid = /^([a-z A-z 0-9 \. _])+@([a-z A-Z 0-9])+\.([a-z A-z]){2,10}(\.([A-Z a-z]){2,10})?$/;
+    var regex_msg =  /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+
+    var flag  = 1;
+
+    if(regex_name.test(myform.name.value) == false)
+	    {
+	    	flag  = 0;
+			document.getElementById('invalid_name').style.visibility = 'visible'; 
+			myform.name.focus();
+	    }
+    if(regex_phoneno.test(myform.phoneno.value) == false)
+	    {
+	    	flag  = 0;
+			document.getElementById('invalid_pno').style.visibility = 'visible'; 
+			myform.phoneno.focus();
+	    }
+    if(regex_emailid.test(myform.emailid.value) == false)
+	    {
+	    	flag  = 0;
+			document.getElementById('invalid_email').style.visibility = 'visible'; 
+			myform.emailid.focus();
+	    }
+	if(regex_msg.test(myform.message.value) == false)
+	    {
+	    	flag  = 0;
+			document.getElementById('invalid_msg').style.visibility = 'visible'; 
+			myform.message.focus();
+		}
+	if(myform.year.value == "") 
+	{
+		flag  = 0;
+		document.getElementById('invalid_year').style.visibility = 'visible'; 
+		myform.message.focus();
+	}
+	if(myform.make.value == "") 
+	{
+		flag  = 0;
+		document.getElementById('invalid_make').style.visibility = 'visible'; 
+		myform.message.focus();
+	}
+	if(myform.model.value == "") 
+	{
+		flag  = 0;
+		document.getElementById('invalid_model').style.visibility = 'visible'; 
+		myform.message.focus();
+	}
+	if(myform.intcol.value == "") 
+	{
+		flag  = 0;
+		document.getElementById('invalid_intcol').style.visibility = 'visible'; 
+		myform.message.focus();
+	}
+	if(myform.extcol.value == "") 
+	{
+		flag  = 0;
+		document.getElementById('invalid_extcol').style.visibility = 'visible'; 
+		myform.message.focus();
+	}
+	if(myform.own.value == "") 
+	{
+		flag  = 0;
+		document.getElementById('invalid_own').style.visibility = 'visible'; 
+		myform.message.focus();
+	}
+	if(myform.insc.value == "") 
+	{
+		flag  = 0;
+		document.getElementById('invalid_insc').style.visibility = 'visible'; 
+		myform.message.focus();
+	}
+	if(myform.trim.value == "") 
+	{
+		flag  = 0;
+		document.getElementById('invalid_trim').style.visibility = 'visible'; 
+		myform.message.focus();
+	}
+	if(myform.trim.value == "") 
+	{
+		flag  = 0;
+		document.getElementById('invalid_vin').style.visibility = 'visible'; 
+		myform.message.focus();
+	}
+	if(myform.mile.value == "") 
+	{
+		flag  = 0;
+		document.getElementById('invalid_mile').style.visibility = 'visible'; 
+		myform.message.focus();
+	}
+    if(flag == 0){
+    	return false;
+    }
+    else{
+    	return true;
+    }
+}
+
 
 
 

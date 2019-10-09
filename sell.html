@@ -82,176 +82,176 @@
 
     <!-- Sell Form -->
     <section id="sell">
-        <div class="py-5">
-            <div class="container sell py-5">
-                <form name="sell_form" method="POST" action="" onsubmit="return sValidate(sell_form)">
-                    <div class="col-6 mx-auto my-3 col-md-6 text-center">
-                        <h5 class="font-weight-bolder">SELL YOUR CAR TO US</h5>
+        <div class="sell py-5">
+            <div class="container">
+    
+            <form name="sell_form" action="" method="POST" onsubmit="return svalidate(sell_form)">
+                <div class="col-6 mx-auto my-3 col-md-6 text-center">
+                    <h5 class="font-weight-bolder">SELL YOUR CAR TO US</h5>
+                </div>
+                <div class="row  justify-content-center">
+                    <div class="col-6 my-3">
+                        <h6>Your Name (Required)</h6>
+                        <input type="text" name="name" class="form-control form-control-lg">
+                        <h6 class="hidden-text" id="invalid_name">*Name is mandatory</h6>
                     </div>
-                    <div class="row  justify-content-center">
-                        <div class="col-6 my-3">
-                            <h6>Your Name (Required)</h6>
-                            <input type="text" name="name" class="form-control form-control-lg">
-                            <h6 class="hidden-text" id="invalid_name">*Name is mandatory</h6>
+                </div>
+                <div class="row  justify-content-center">
+                    <div class="col-6 my-3">
+                        <h6>Phone Number</h6>
+                        <input type="text" name="phoneno" class="form-control form-control-lg">
+                        <h6 class="hidden-text" id="invalid_pno">*Invalid Phone Number</h6>
+                    </div>
+                </div> 
+                <div class="row  justify-content-center">
+                    <div class="col-6 my-3">
+                        <h6>Your Email (Required)</h6>
+                        <input type="text" name="emailid" class="form-control form-control-lg">
+                        <h6 class="hidden-text" id="invalid_email">*Invalid Email</h6>                            
+                    </div>
+                </div>
+                <div class="col-6 mx-auto my-3 col-md-6 text-center">
+                    <h5 class="font-weight-bolder">VEHICLE INFO</h5>
+                </div>
+                <div class="row  justify-content-center">
+                    <div class="col-6 my-3">
+                        <h6>Year</h6>
+                        <input type="text" name="year" class="form-control form-control-lg">
+                        <h6 class="hidden-text" id="invalid_year">*This Field is Required</h6>
+                    </div>
+                </div>
+                <div class="row  justify-content-center">
+                    <div class="col-6 my-3">
+                        <h6>Make</h6>
+                        <input type="text" name="make" class="form-control form-control-lg">
+                        <h6 class="hidden-text" id="invalid_make">*This Field is Required</h6>
+                    </div>
+                </div>
+                <div class="row  justify-content-center">
+                    <div class="col-6 my-3">
+                        <h6>Model</h6>
+                        <input type="text" name="model" class="form-control form-control-lg">
+                        <h6 class="hidden-text" id="invalid_model">*This Field is Required</h6>
+                    </div>
+                </div>
+                <div class="row  justify-content-center">
+                    <div class="col-6 my-3">
+                        <h6>Interior Color</h6>
+                        <input type="text" name="intcol" class="form-control form-control-lg">
+                        <h6 class="hidden-text" id="invalid_intcol">*This Field is Required</h6>
+                    </div>
+                </div>
+                <div class="row  justify-content-center">
+                    <div class="col-6 my-3">
+                        <h6>Exterior Color</h6>
+                        <input type="text" name="extcol" class="form-control form-control-lg">
+                        <h6 class="hidden-text" id="invalid_extcol">*This Field is Required</h6>
+                    </div>
+                </div>
+                <div class="row  justify-content-center">
+                    <div class="col-6 my-3">
+                        <h6>Number of Owners</h6>
+                        <input type="text" name="own" class="form-control form-control-lg">
+                        <h6 class="hidden-text" id="invalid_own">*This Field is Required</h6>
+                    </div>
+                </div>
+                <div class="row  justify-content-center">
+                    <div class="col-6 my-3">
+                        <h6>Insurance Till</h6>
+                        <input type="text" name="insc" class="form-control form-control-lg">
+                        <h6 class="hidden-text" id="invalid_insc">*This Field is Required</h6>
+                    </div>
+                </div>
+                <div class="row  justify-content-center">
+                    <div class="col-6 my-3">
+                        <h6>Trim</h6>
+                        <input type="text" name="trim" class="form-control form-control-lg">
+                        <h6 class="hidden-text" id="invalid_trim">*This Field is Required</h6>
+                    </div>
+                </div>
+                <div class="row  justify-content-center">
+                    <div class="col-6 my-3">
+                        <h6>Vin</h6>
+                        <input type="text" name="vin" class="form-control form-control-lg">
+                        <h6 class="hidden-text" id="invalid_vin">*This Field is Required</h6>
+                    </div>
+                </div>
+                <div class="row  justify-content-center">
+                    <div class="col-6 my-3">
+                        <h6>Mileage</h6>
+                        <input type="text" name="mile" class="form-control form-control-lg">
+                        <h6 class="hidden-text" id="invalid_mile">*This Field is Required</h6>
+                    </div>
+                </div>
+                <div class="row  justify-content-center">
+                    <div class="col-6 my-3">
+                        <h6>Exterior Condition*</h6>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="exteriorRadio1" value="Extra Clean" checked>
+                            <label class="form-check-label" for="inlineRadio1">Extra Clean</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="exteriorRadio2" value="Clean">
+                            <label class="form-check-label" for="inlineRadio2">Clean</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="exteriorRadio3" value="Average">
+                            <label class="form-check-label" for="inlineRadio3">Average</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="exteriorRadio4" value="Rough">
+                            <label class="form-check-label" for="inlineRadio4">Rough</label>
                         </div>
                     </div>
-                    <div class="row  justify-content-center">
-                        <div class="col-6 my-3">
-                            <h6>Your Email (Required)</h6>
-                            <input type="text" name="emailid" class="form-control form-control-lg">
-                            <h6 class="hidden-text" id="invalid_email">*Invalid Email</h6>                            
+                </div>
+                <div class="row  justify-content-center">
+                    <div class="col-6 my-3">
+                        <h6>Interior Condition*</h6>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="interiorRadio1" value="Extra Clean" checked>
+                            <label class="form-check-label" for="inlineRadio1">Extra Clean</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="interiorRadio2" value="Clean">
+                            <label class="form-check-label" for="inlineRadio2">Clean</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="interiorRadio3" value="Average">
+                            <label class="form-check-label" for="inlineRadio3">Average</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="interiorRadio4" value="Rough">
+                            <label class="form-check-label" for="inlineRadio4">Rough</label>
                         </div>
                     </div>
-                    <div class="row  justify-content-center">
-                        <div class="col-6 my-3">
-                            <h6>Phone Number</h6>
-                            <input type="text" name="phoneno" class="form-control form-control-lg">
-                            <h6 class="hidden-text" id="invalid_pno">*Invalid Phone Number</h6>
+                </div>
+                <div class="row  justify-content-center">
+                    <div class="col-6 my-3">
+                        <h6>Been in Accident ?*</h6>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="accidentRadio1" value="No" checked>
+                            <label class="form-check-label" for="inlineRadio1">No</label>
                         </div>
-                    </div>                    
-                    <div class="col-6 mx-auto my-3 col-md-6 text-center">
-                            <h5 class="font-weight-bolder">VEHICLE INFO</h5>
-                    </div>
-                    <div class="row  justify-content-center">
-                        <div class="col-6 my-3">
-                            <h6>Year</h6>
-                            <input type="text" class="form-control form-control-lg">
-                            <h6 class="hidden-text" id="invalid_year">*This Field is Required</h6>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="accidentRadio2" value="Yes">
+                            <label class="form-check-label" for="inlineRadio2">Yes</label>
                         </div>
                     </div>
-                    <div class="row  justify-content-center">
-                        <div class="col-6 my-3">
-                            <h6>Make</h6>
-                            <input type="text" class="form-control form-control-lg">
-                            <h6 class="hidden-text" id="invalid_make">*This Field is Required</h6>
-                        </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-6 my-3">
+                        <h6>Your Message</h6>
+                        <textarea rows="5" name="message" class="form-control form-control-lg"></textarea>
+                        <h6 class="hidden-text" id="invalid_msg">*Message cannot be blank</h6>
                     </div>
-                    <div class="row  justify-content-center">
-                        <div class="col-6 my-3">
-                            <h6>Model</h6>
-                            <input type="text" class="form-control form-control-lg">
-                            <h6 class="hidden-text" id="invalid_model">*This Field is Required</h6>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col my-3 text-center">
+                        <input type="submit" value="SEND" class="btn msg-btn"></input>
                     </div>
-                    <div class="row  justify-content-center">
-                        <div class="col-6 my-3">
-                            <h6>Interior Color</h6>
-                            <input type="text" class="form-control form-control-lg">
-                            <h6 class="hidden-text" id="invalid_intcol">*This Field is Required</h6>
-                        </div>
-                    </div>
-                    <div class="row  justify-content-center">
-                        <div class="col-6 my-3">
-                            <h6>Exterior Color</h6>
-                            <input type="text" class="form-control form-control-lg">
-                            <h6 class="hidden-text" id="invalid_extcol">*This Field is Required</h6>
-                        </div>
-                    </div>
-                    <div class="row  justify-content-center">
-                        <div class="col-6 my-3">
-                            <h6>Number of Owners</h6>
-                            <input type="text" class="form-control form-control-lg">
-                            <h6 class="hidden-text" id="invalid_own">*This Field is Required</h6>
-                        </div>
-                    </div>
-                    <div class="row  justify-content-center">
-                        <div class="col-6 my-3">
-                            <h6>Insurance Till</h6>
-                            <input type="text" class="form-control form-control-lg">
-                            <h6 class="hidden-text" id="invalid_insc">*This Field is Required</h6>
-                        </div>
-                    </div>
-                    <div class="row  justify-content-center">
-                        <div class="col-6 my-3">
-                            <h6>Trim</h6>
-                            <input type="text" class="form-control form-control-lg">
-                            <h6 class="hidden-text" id="invalid_trim">*This Field is Required</h6>
-                        </div>
-                    </div>
-                    <div class="row  justify-content-center">
-                        <div class="col-6 my-3">
-                            <h6>Vin</h6>
-                            <input type="text" class="form-control form-control-lg">
-                            <h6 class="hidden-text" id="invalid_vin">*This Field is Required</h6>
-                        </div>
-                    </div>
-                    <div class="row  justify-content-center">
-                        <div class="col-6 my-3">
-                            <h6>Mileage</h6>
-                            <input type="text" class="form-control form-control-lg">
-                            <h6 class="hidden-text" id="invalid_mile">*This Field is Required</h6>
-                        </div>
-                    </div>
-                    <div class="row  justify-content-center">
-                        <div class="col-6 my-3">
-                            <h6>Exterior Condition*</h6>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" id="exteriorRadio1" value="Extra Clean" checked>
-                                <label class="form-check-label" for="inlineRadio1">Extra Clean</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" id="exteriorRadio2" value="Clean">
-                                <label class="form-check-label" for="inlineRadio2">Clean</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" id="exteriorRadio3" value="Average">
-                                <label class="form-check-label" for="inlineRadio3">Average</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" id="exteriorRadio4" value="Rough">
-                                <label class="form-check-label" for="inlineRadio4">Rough</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row  justify-content-center">
-                        <div class="col-6 my-3">
-                            <h6>Interior Condition*</h6>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" id="interiorRadio1" value="Extra Clean" checked>
-                                <label class="form-check-label" for="inlineRadio1">Extra Clean</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" id="interiorRadio2" value="Clean">
-                                <label class="form-check-label" for="inlineRadio2">Clean</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" id="interiorRadio3" value="Average">
-                                <label class="form-check-label" for="inlineRadio3">Average</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" id="interiorRadio4" value="Rough">
-                                <label class="form-check-label" for="inlineRadio4">Rough</label>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="row  justify-content-center">
-                        <div class="col-6 my-3">
-                            <h6>Been in Accident ?*</h6>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" id="accidentRadio1" value="No" checked>
-                                <label class="form-check-label" for="inlineRadio1">No</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" id="accidentRadio2" value="Yes">
-                                <label class="form-check-label" for="inlineRadio2">Yes</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-6 my-3">
-                            <h6>Your Message</h6>
-                            <textarea rows="5" name="message" class="form-control form-control-lg"></textarea>
-                            <h6 class="hidden-text" id="invalid_msg">*Message cannot be blank</h6>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col my-3 text-center">
-                            <input type="submit" value="SEND" class="btn msg-btn"></input>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
+        </form>
         </div>
     </section>
 
