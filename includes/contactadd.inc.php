@@ -1,5 +1,10 @@
 <?php
-	include_once'dbh.inc.php';
+	$dbServername = 'localhost';
+	$dbUserName = 'root';
+	$dbPassword = '';
+	$dbName = 'regenxdb';
+
+	$conn = mysqli_connect($dbServername, $dbUserName, $dbPassword, $dbName) or die("Unable to connect");
 
 	$name = $_POST['name'];
 	$phoneno = $_POST['phoneno'];
@@ -21,3 +26,5 @@
 mysqli_query($conn, $sql);
 
 header("LOCATION: ../contact.html?data=added");
+mysqli_close($conn);
+?>
