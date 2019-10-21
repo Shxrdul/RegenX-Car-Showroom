@@ -140,18 +140,6 @@ function svalidate(myform){
 		document.getElementById('invalid_insc').style.visibility = 'visible'; 
 		myform.message.focus();
 	}
-	if(myform.trim.value == "") 
-	{
-		flag  = 0;
-		document.getElementById('invalid_trim').style.visibility = 'visible'; 
-		myform.message.focus();
-	}
-	if(myform.trim.value == "") 
-	{
-		flag  = 0;
-		document.getElementById('invalid_vin').style.visibility = 'visible'; 
-		myform.message.focus();
-	}
 	if(myform.mile.value == "") 
 	{
 		flag  = 0;
@@ -165,7 +153,3 @@ function svalidate(myform){
     	return true;
     }
 }
-
-
-
-
