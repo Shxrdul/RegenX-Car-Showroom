@@ -128,7 +128,7 @@ $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                     <div class="inv-check-icon py-2">
                                         <i class="fas fa-tachometer-alt"></i>
                                     </div>
-                                    <h6 class="inv-check-text">Miles</h6>
+                                    <h6 class="inv-check-text"><?php echo $product['mileage']?>MPL</h6>
                                 </div>
                             </div>
                             <div class=" col-4 p-2">
@@ -143,7 +143,7 @@ $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     </div>		  
 	                <div class="card-footer d-flex justify-content-center py-4">
 	                    <a href="" class="inv-car-value text-center py-2 px-3">   
-	                            Rs <?php echo $product['price']?>
+	                            Rs. <?php echo $product['price']?>
 	                    </a>    
 	                </div>
                 </div>
