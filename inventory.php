@@ -90,74 +90,66 @@ $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <!--End Header Section-->
     </div>
 
-
-    
-    <!-- Single Car -->
-    <?php foreach ($product as $product):?> 
-    <div class="col-10 mx-auto my-3 col-md-6 col-lg-4">
-        <div class="card inv-car-card">
-            <!-- Card Body -->
-            <div class="car-body py-4">
-                <div class="car-info d-flex justify-content-between px-3">
-                    <!-- First Flex Child -->
-                    <div class="car-text">
-                        <h4 class="font-weight-bold inv-head-text"><?php echo $product['carname']?></h4>
-                        <div class="inv-line-1 inv-head-text"></div>
-                        <div class="inv-line-2 inv-head-text"></div>
-                    </div>                   
-                </div>     
-            </div>
-            <!-- End Card Body -->
-            <div class="inv-img-container d-flex">
-                <img src="<?php echo $product['img']?>" class="card-img-top inv-car-img" alt="">
-            </div>
-            <div class="container py-2">
-                <div class="row px-2">
-                    <div class=" col-3 p-2">
-                        <div class="inv-check-card text-center py-2">
-                            <div class="inv-check-icon py-2">
-                                <i class="far fa-star"></i>
-                            </div>
-                            <h6 class="inv-check-text" ><?php echo $product['colour']?></h6>
-                        </div>
+    <div class="container my-4">
+    	<div class="row">
+            <!-- Single Car -->
+            <?php foreach ($product as $product):?> 
+            <div class="col-12 mx-auto my-3 col-md-6 col-lg-4">
+                <div class="card inv-car-card">
+                    <!-- Card Body -->
+                    <div class="car-body py-4">
+                        <div class="car-info d-flex justify-content-between px-3">
+                            <!-- First Flex Child -->
+                            <div class="car-text">
+                                <h4 class="font-weight-bold inv-head-text"><?php echo $product['carname']?></h4>
+                                <div class="inv-line-1 inv-head-text"></div>
+                                <div class="inv-line-2 inv-head-text"></div>
+                            </div>                   
+                        </div>     
                     </div>
-                    <div class=" col-3 p-2">
-                        <div class="inv-check-card text-center py-2">
-                            <div class="inv-check-icon py-2">
-                                <i class="fas fa-dot-circle"></i>
-                            </div>
-                            <h6 class="inv-check-text"><?php echo $product['colour']?></h6>
-                        </div>
+                    <!-- End Card Body -->
+                    <div class="inv-img-container d-flex">
+                        <img src="<?php echo $product['img']?>" class="card-img-top inv-car-img" alt="">
                     </div>
-                    <div class=" col-3 p-2">
-                        <div class="inv-check-card text-center py-2">
-                            <div class="inv-check-icon py-2">
-                                <i class="fas fa-tachometer-alt"></i>
+                    <div class="container py-2">
+                    	<div class="row">
+                            <div class=" col-4 p-2">
+                                <div class="inv-check-card text-center py-2">
+                                    <div class="inv-check-icon py-2">
+                                        <i class="fas fa-dot-circle"></i>
+                                    </div>
+                                    <h6 class="inv-check-text"><?php echo $product['colour']?></h6>
+                                </div>
                             </div>
-                            <h6 class="inv-check-text">Miles</h6>
-                        </div>
-                    </div>
-                    <div class=" col-3 p-2">
-                        <div class="inv-check-card text-center py-2">
-                            <div class="inv-check-icon py-2">
-                                <i class="fas fa-fire-alt"></i>
+                            <div class=" col-4 p-2">
+                                <div class="inv-check-card text-center py-2">
+                                    <div class="inv-check-icon py-2">
+                                        <i class="fas fa-tachometer-alt"></i>
+                                    </div>
+                                    <h6 class="inv-check-text">Miles</h6>
+                                </div>
                             </div>
-                            <h6 class="inv-check-text"><?php echo $product['fueltype']?></h6>
-                        </div>
-                    </div>
-                    
+                            <div class=" col-4 p-2">
+                                <div class="inv-check-card text-center py-2">
+                                    <div class="inv-check-icon py-2">
+                                        <i class="fas fa-fire-alt"></i>
+                                    </div>
+                                    <h6 class="inv-check-text"><?php echo $product['fueltype']?></h6>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>		  
+	                <div class="card-footer d-flex justify-content-center py-4">
+	                    <a href="" class="inv-car-value text-center py-2 px-3">   
+	                            Rs <?php echo $product['price']?>
+	                    </a>    
+	                </div>
                 </div>
             </div>
-            <div class="card-footer d-flex justify-content-center py-4">
-                <a href="" class="inv-car-value text-center py-2 px-3">   
-                        Rs <?php echo $product['price']?>
-                </a>    
-            </div>
+            <?php endforeach;?>
+            <!-- End Single Car -->   
         </div>
-    </div>
-    <?php endforeach;?>
-    <!-- End Single Car -->
-
+    </div>          
     <!-- Contact Section -->
 	<section id="contact">
 		<div class="contact d-flex justify-content-center py-5">

@@ -58,7 +58,7 @@ function cvalidate(myform){
     }
 }
 
-//Contact Form Validation
+//Sell Form Validation
 function svalidate(myform){
 	
 	document.getElementById('invalid_name').style.visibility = 'hidden';

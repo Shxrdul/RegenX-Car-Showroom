@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-	<title>RegenX | Car Deaalership</title>
+	<title>RegenX | Car Dealership</title>
 	<!--Bootstrap CSS-->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<!--main CSS-->
@@ -73,8 +73,8 @@
 						<h2 class="my-2 title">PORSCHE</h2>
 						<h3>TAYCAN</h3>
 						<h6>STARTS FROM</h6>
-						<h2>$170,000
-							<a href="" class=title-icon d-inline-block mx-2>
+						<h2>Rs. 85L
+							<a href="inventory.php" class=title-icon d-inline-block mx-2>
 							<i class="fas fa-play"></i>
 							</a>
 						</h2>
@@ -152,57 +152,63 @@
 			<!--Section Title-->
 			<div class="row mb-5">
 					<div class="col d-flex flex-wrap justify-content-center">
-						<h1 class="font-weight-bold align-self-center mx-1">FEATURED</h1>
-						<h1 class="section-title-special mx-1">CARS</h1>
-					</div>		
+						<h1 class="font-weight-bold align-self-center mx-1" style="color: white;">TYPES OF</h1>
+						<h1 class="section-title-special mx-1">VEHICLES</h1>
+					</div>	
+					<div class="col-12 d-flex flex-wrap justify-content-center">
+                        <h6 style="color:white; font-size: 1rem">
+							THAT WE ARE CURRENTLY DEALING
+                        </h6>
+                    </div>
 				</div>
 				<!--End Section Title-->
+
 				<div class="row">
 					<!-- Featured info -->
 					<div class="col-10 mx-auto col-lg-6 featured-info my-3">
 						<!-- Single item -->
-						<div class="featured-items my-3 d-flex p-2 align-items-baseline flex-wrap">
+						<div onclick="window.location.href='inventory.php'" class="featured-items my-3 d-flex p-2 align-items-baseline flex-wrap">
 							<span class="featured-icon mr-2">
 								<i class="fas fa-car"></i>
 							</span>
-							<h5 class="font-weight-bold mx-1">MERCEDEZ</h5>
-							<h5 class="mx-1">NEW MODEL</h5>
+							<h5 class="font-weight-bold mx-1">SEDAN</h5>
+							<h5 class="mx-1">136 OFFERS</h5>
 						</div>
 						<!-- End Single item -->
 						<!-- Single item -->
-						<div class="featured-items my-3 d-flex p-2 align-items-baseline flex-wrap">
+						<div onclick="window.location.href='inventory.php'" class="featured-items my-3 d-flex p-2 align-items-baseline flex-wrap">
 							<span class="featured-icon mr-2">
 								<i class="fas fa-car"></i>
 							</span>
-							<h5 class="font-weight-bold mx-1">MERCEDEZ</h5>
-							<h5 class="mx-1">NEW MODEL</h5>
+							<h5 class="font-weight-bold mx-1">CONVERTIBLE</h5>
+							<h5 class="mx-1">11 OFFERS</h5>
 						</div>
 						<!-- End Single item -->
 						<!-- Single item -->
-						<div class="featured-items my-3 d-flex p-2 align-items-baseline flex-wrap">
+						<div onclick="window.location.href='inventory.php'" class="featured-items my-3 d-flex p-2 align-items-baseline flex-wrap">
 							<span class="featured-icon mr-2">
 								<i class="fas fa-car"></i>
 							</span>
-							<h5 class="font-weight-bold mx-1">MERCEDEZ</h5>
-							<h5 class="mx-1">NEW MODEL</h5>
+							<h5 class="font-weight-bold mx-1">SUV</h5>
+							<h5 class="mx-1">88 OFFERS</h5>
 						</div>
 						<!-- End Single item -->
 						<!-- Single item -->
-						<div class="featured-items my-3 d-flex p-2 align-items-baseline flex-wrap">
+						<div onclick="window.location.href='inventory.php'" class="featured-items my-3 d-flex p-2 align-items-baseline flex-wrap">
 							<span class="featured-icon mr-2">
 								<i class="fas fa-car"></i>
 							</span>
-							<h5 class="font-weight-bold mx-1">MERCEDEZ</h5>
-							<h5 class="mx-1">NEW MODEL</h5>
+							<h5 class="font-weight-bold mx-1">LUXURY</h5>
+							<h5 class="mx-1">12 OFFERS</h5>
 						</div>
 						<!-- End Single item -->
 						<!-- Single item -->
-						<div class="featured-items my-3 d-flex p-2 align-items-baseline flex-wrap">
+						<div onclick="window.location.href='inventory.php'" class="featured-items my-3 d-flex p-2 align-items-baseline flex-wrap">
 							<span class="featured-icon mr-2">
 								<i class="fas fa-car"></i>
 							</span>
-							<h5 class="font-weight-bold mx-1">MERCEDEZ</h5>
-							<h5 class="mx-1">NEW MODEL</h5>
+							<h5 class="font-weight-bold mx-1">COUPE</h5>
+							<h5 class="mx-1">88 OFFERS</h5>
 						</div>
 						<!-- End Single item -->
 					</div>
@@ -211,13 +217,13 @@
 						<!-- Img Container -->
 						<div class="img-container">
 							<img src="img/featured.jpg" alt="" class="img-fluid featured-photo">
-							<a href="#" class="featured-link">
-								<i class="fas fa-search"></i>
-							</a>
 						</div>
 
 					</div>
 				</div>
+
+
+
 		</div>
 	</section>
 	<!-- End Featured Section -->
@@ -234,179 +240,333 @@
 				</div>		
 			</div>
 			<!--End Section Title-->
-			<div class="row mb-5">
-				<div class="col-10 mx-auto col-md d-flex justify-content-center">
-					<button class="btn btn-outline-secondary mx-1">ALL</button>
-					<button class="btn btn-outline-secondary mx-1">AMERICAN</button>
-					<button class="btn btn-outline-secondary mx-1">GERMAN</button>	
-				</div>
-			</div>
 			<!-- Cars -->
 			<div class="row">
 				<!-- Single Car -->
-				<div class="col-10 mx-auto my-3 col-md-6 col-lg-4">
-					<div class="card car-card">
-						<img src="img/car1.jpg" class="card-img-top car-img" alt="">
+				<div class="col-12 mx-auto my-3 col-md-6 col-lg-4">
+					<div class="card inv-car-card">
 						<!-- Card Body -->
-						<div class="car-body">
-							<div class="car-info d-flex justify-content-between py-2 px-3">
+						<div class="car-body py-4">
+							<div class="car-info d-flex justify-content-between px-3">
 								<!-- First Flex Child -->
 								<div class="car-text">
-									<h6 class="font-weight-bold">CAR MAKER</h6>
-									<h6>MODEL</h6>
-								</div>
-								<!-- Second Flex Child -->
-								<h5 class="car-value align-self-center py-2 px-3">$
-									<span class="car-price">10,000</span>
-								</h5>
-							</div>
+									<h4 class="font-weight-bold inv-head-text">BMW i8</h4>
+									<div class="inv-line-1 inv-head-text"></div>
+									<div class="inv-line-2 inv-head-text"></div>
+								</div>                   
+							</div>     
 						</div>
 						<!-- End Card Body -->
-						<div class="card-footer d-flex justify-content-between">
-							<p><span><i class="fas fa-car"></i></span>SEDAN</p>
-							<p><span><i class="fas fa-cogs"></i></span>AUTOMATIC</p>
-							<p><span><i class="fas fa-gas-pump"></i></span>50</p>
+						<div class="inv-img-container d-flex">
+							<img src="img/car-img/bmw-i8.jpg" class="card-img-top inv-car-img" alt="">
+						</div>
+						<div class="container py-2">
+							<div class="row px-2">
+								<div class=" col-4 p-2">
+									<div class="inv-check-card text-center py-2">
+										<div class="inv-check-icon py-2">
+											<i class="fas fa-dot-circle"></i>
+										</div>
+										<h6 class="inv-check-text">WHITE</h6>
+									</div>
+								</div>
+								<div class=" col-4 p-2">
+									<div class="inv-check-card text-center py-2">
+										<div class="inv-check-icon py-2">
+											<i class="fas fa-tachometer-alt"></i>
+										</div>
+										<h6 class="inv-check-text">23 MPL</h6>
+									</div>
+								</div>
+								<div class=" col-4 p-2">
+									<div class="inv-check-card text-center py-2">
+										<div class="inv-check-icon py-2">
+											<i class="fas fa-fire-alt"></i>
+										</div>
+										<h6 class="inv-check-text">DIESEL</h6>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<div class="card-footer d-flex justify-content-center py-4">
+							<a href="inventory.php" class="inv-car-value text-center py-2 px-3">  	Rs. 2.25CR
+							</a>    
 						</div>
 					</div>
 				</div>
 				<!-- End Single Car -->
 				<!-- Single Car -->
-				<div class="col-10 mx-auto my-3 col-md-6 col-lg-4">
-					<div class="card car-card">
-						<img src="img/car1.jpg" class="card-img-top car-img" alt="">
+				<div class="col-12 mx-auto my-3 col-md-6 col-lg-4">
+					<div class="card inv-car-card">
 						<!-- Card Body -->
-							<div class="car-body">
-							<div class="car-info d-flex justify-content-between py-2 px-3">
+						<div class="car-body py-4">
+							<div class="car-info d-flex justify-content-between px-3">
 								<!-- First Flex Child -->
 								<div class="car-text">
-									<h6 class="font-weight-bold">CAR MAKER</h6>
-									<h6>MODEL</h6>
-								</div>
-								<!-- Second Flex Child -->
-								<h5 class="car-value align-self-center py-2 px-3">$
-									<span class="car-price">10,000</span>
-								</h5>
-							</div>
+									<h4 class="font-weight-bold inv-head-text">ASTON MARTIN V8 Vantage</h4>
+									<div class="inv-line-1 inv-head-text"></div>
+									<div class="inv-line-2 inv-head-text"></div>
+								</div>                   
+							</div>     
 						</div>
 						<!-- End Card Body -->
-						<div class="card-footer d-flex justify-content-between">
-							<p><span><i class="fas fa-car"></i></span>SEDAN</p>
-							<p><span><i class="fas fa-cogs"></i></span>AUTOMATIC</p>
-							<p><span><i class="fas fa-gas-pump"></i></span>50</p>
+						<div class="inv-img-container d-flex">
+							<img src="img/car-img/aston-martin-v8-vantage.jpg" class="card-img-top inv-car-img" alt="">
+						</div>
+						<div class="container py-2">
+							<div class="row px-2">
+								<div class=" col-4 p-2">
+									<div class="inv-check-card text-center py-2">
+										<div class="inv-check-icon py-2">
+											<i class="fas fa-dot-circle"></i>
+										</div>
+										<h6 class="inv-check-text">BLACK</h6>
+									</div>
+								</div>
+								<div class=" col-4 p-2">
+									<div class="inv-check-card text-center py-2">
+										<div class="inv-check-icon py-2">
+											<i class="fas fa-tachometer-alt"></i>
+										</div>
+										<h6 class="inv-check-text">10.8 MPL</h6>
+									</div>
+								</div>
+								<div class=" col-4 p-2">
+									<div class="inv-check-card text-center py-2">
+										<div class="inv-check-icon py-2">
+											<i class="fas fa-fire-alt"></i>
+										</div>
+										<h6 class="inv-check-text">DIESEL</h6>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<div class="card-footer d-flex justify-content-center py-4">
+							<a href="inventory.php" class="inv-car-value text-center py-2 px-3">  	Rs. 3.29CR
+							</a>    
 						</div>
 					</div>
 				</div>
 				<!-- End Single Car -->
 				<!-- Single Car -->
-				<div class="col-10 mx-auto my-3 col-md-6 col-lg-4">
-					<div class="card car-card">
-						<img src="img/car1.jpg" class="card-img-top car-img" alt="">
+				<div class="col-12 mx-auto my-3 col-md-6 col-lg-4">
+					<div class="card inv-car-card">
 						<!-- Card Body -->
-						<div class="car-body">
-							<div class="car-info d-flex justify-content-between py-2 px-3">
+						<div class="car-body py-4">
+							<div class="car-info d-flex justify-content-between px-3">
 								<!-- First Flex Child -->
 								<div class="car-text">
-									<h6 class="font-weight-bold">CAR MAKER</h6>
-									<h6>MODEL</h6>
-								</div>
-								<!-- Second Flex Child -->
-								<h5 class="car-value align-self-center py-2 px-3">$
-									<span class="car-price">10,000</span>
-								</h5>
-							</div>
+									<h4 class="font-weight-bold inv-head-text">BENTLEY MULSANNE</h4>
+									<div class="inv-line-1 inv-head-text"></div>
+									<div class="inv-line-2 inv-head-text"></div>
+								</div>                   
+							</div>     
 						</div>
 						<!-- End Card Body -->
-						<div class="card-footer d-flex justify-content-between">
-							<p><span><i class="fas fa-car"></i></span>SEDAN</p>
-							<p><span><i class="fas fa-cogs"></i></span>AUTOMATIC</p>
-							<p><span><i class="fas fa-gas-pump"></i></span>50</p>
+						<div class="inv-img-container d-flex">
+							<img src="img/car-img/bentley-mulsanne.jpg" class="card-img-top inv-car-img" alt="">
+						</div>
+						<div class="container py-2">
+							<div class="row px-2">
+								<div class=" col-4 p-2">
+									<div class="inv-check-card text-center py-2">
+										<div class="inv-check-icon py-2">
+											<i class="fas fa-dot-circle"></i>
+										</div>
+										<h6 class="inv-check-text">BLACK</h6>
+									</div>
+								</div>
+								<div class=" col-4 p-2">
+									<div class="inv-check-card text-center py-2">
+										<div class="inv-check-icon py-2">
+											<i class="fas fa-tachometer-alt"></i>
+										</div>
+										<h6 class="inv-check-text">10.1 MPL</h6>
+									</div>
+								</div>
+								<div class=" col-4 p-2">
+									<div class="inv-check-card text-center py-2">
+										<div class="inv-check-icon py-2">
+											<i class="fas fa-fire-alt"></i>
+										</div>
+										<h6 class="inv-check-text">PETROL</h6>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<div class="card-footer d-flex justify-content-center py-4">
+							<a href="inventory.php" class="inv-car-value text-center py-2 px-3">  	Rs. 55L
+							</a>    
 						</div>
 					</div>
 				</div>
 				<!-- End Single Car -->
 				<!-- Single Car -->
-				<div class="col-10 mx-auto my-3 col-md-6 col-lg-4">
-					<div class="card car-card">
-						<img src="img/car1.jpg" class="card-img-top car-img" alt="">
+				<div class="col-12 mx-auto my-3 col-md-6 col-lg-4">
+					<div class="card inv-car-card">
 						<!-- Card Body -->
-						<div class="car-body">
-							<div class="car-info d-flex justify-content-between py-2 px-3">
+						<div class="car-body py-4">
+							<div class="car-info d-flex justify-content-between px-3">
 								<!-- First Flex Child -->
 								<div class="car-text">
-									<h6 class="font-weight-bold">CAR MAKER</h6>
-									<h6>MODEL</h6>
-								</div>
-								<!-- Second Flex Child -->
-								<h5 class="car-value align-self-center py-2 px-3">$
-									<span class="car-price">10,000</span>
-								</h5>
-							</div>
+									<h4 class="font-weight-bold inv-head-text">FORD MUSTANG</h4>
+									<div class="inv-line-1 inv-head-text"></div>
+									<div class="inv-line-2 inv-head-text"></div>
+								</div>                   
+							</div>     
 						</div>
 						<!-- End Card Body -->
-						<div class="card-footer d-flex justify-content-between">
-							<p><span><i class="fas fa-car"></i></span>SEDAN</p>
-							<p><span><i class="fas fa-cogs"></i></span>AUTOMATIC</p>
-							<p><span><i class="fas fa-gas-pump"></i></span>50</p>
+						<div class="inv-img-container d-flex">
+							<img src="img/car-img/ford-mustang.jpg" class="card-img-top inv-car-img" alt="">
+						</div>
+						<div class="container py-2">
+							<div class="row px-2">
+								<div class=" col-4 p-2">
+									<div class="inv-check-card text-center py-2">
+										<div class="inv-check-icon py-2">
+											<i class="fas fa-dot-circle"></i>
+										</div>
+										<h6 class="inv-check-text">BLACK</h6>
+									</div>
+								</div>
+								<div class=" col-4 p-2">
+									<div class="inv-check-card text-center py-2">
+										<div class="inv-check-icon py-2">
+											<i class="fas fa-tachometer-alt"></i>
+										</div>
+										<h6 class="inv-check-text">13 MPL</h6>
+									</div>
+								</div>
+								<div class=" col-4 p-2">
+									<div class="inv-check-card text-center py-2">
+										<div class="inv-check-icon py-2">
+											<i class="fas fa-fire-alt"></i>
+										</div>
+										<h6 class="inv-check-text">PETROL</h6>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<div class="card-footer d-flex justify-content-center py-4">
+							<a href="inventory.php" class="inv-car-value text-center py-2 px-3">  	Rs. 74.6L
+							</a>    
 						</div>
 					</div>
 				</div>
 				<!-- End Single Car -->
 				<!-- Single Car -->
-				<div class="col-10 mx-auto my-3 col-md-6 col-lg-4">
-					<div class="card car-card">
-						<img src="img/car1.jpg" class="card-img-top car-img" alt="">
+				<div class="col-12 mx-auto my-3 col-md-6 col-lg-4">
+					<div class="card inv-car-card">
 						<!-- Card Body -->
-						<div class="car-body">
-							<div class="car-info d-flex justify-content-between py-2 px-3">
+						<div class="car-body py-4">
+							<div class="car-info d-flex justify-content-between px-3">
 								<!-- First Flex Child -->
 								<div class="car-text">
-									<h6 class="font-weight-bold">CAR MAKER</h6>
-									<h6>MODEL</h6>
-								</div>
-								<!-- Second Flex Child -->
-								<h5 class="car-value align-self-center py-2 px-3">$
-									<span class="car-price">10,000</span>
-								</h5>
-							</div>
+									<h4 class="font-weight-bold inv-head-text">PORSCHE PANAMERA</h4>
+									<div class="inv-line-1 inv-head-text"></div>
+									<div class="inv-line-2 inv-head-text"></div>
+								</div>                   
+							</div>     
 						</div>
 						<!-- End Card Body -->
-						<div class="card-footer d-flex justify-content-between">
-							<p><span><i class="fas fa-car"></i></span>SEDAN</p>
-							<p><span><i class="fas fa-cogs"></i></span>AUTOMATIC</p>
-							<p><span><i class="fas fa-gas-pump"></i></span>50</p>
+						<div class="inv-img-container d-flex">
+							<img src="img/car-img/porsche-panamera.jpg" class="card-img-top inv-car-img" alt="">
+						</div>
+						<div class="container py-2">
+							<div class="row px-2">
+								<div class=" col-4 p-2">
+									<div class="inv-check-card text-center py-2">
+										<div class="inv-check-icon py-2">
+											<i class="fas fa-dot-circle"></i>
+										</div>
+										<h6 class="inv-check-text">BLACK</h6>
+									</div>
+								</div>
+								<div class=" col-4 p-2">
+									<div class="inv-check-card text-center py-2">
+										<div class="inv-check-icon py-2">
+											<i class="fas fa-tachometer-alt"></i>
+										</div>
+										<h6 class="inv-check-text">10.75 MPL</h6>
+									</div>
+								</div>
+								<div class=" col-4 p-2">
+									<div class="inv-check-card text-center py-2">
+										<div class="inv-check-icon py-2">
+											<i class="fas fa-fire-alt"></i>
+										</div>
+										<h6 class="inv-check-text">PETROL</h6>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<div class="card-footer d-flex justify-content-center py-4">
+							<a href="inventory.php" class="inv-car-value text-center py-2 px-3">  	Rs. 2.52CR
+							</a>    
 						</div>
 					</div>
 				</div>
 				<!-- End Single Car -->
-				<!-- Single Car -->
-				<div class="col-10 mx-auto my-3 col-md-6 col-lg-4">
-					<div class="card car-card">
-						<img src="img/car1.jpg" class="card-img-top car-img" alt="">
+				<!-- Single Car -->				
+				<div class="col-12 mx-auto my-3 col-md-6 col-lg-4">
+					<div class="card inv-car-card">
 						<!-- Card Body -->
-						<div class="car-body">
-							<div class="car-info d-flex justify-content-between py-2 px-3">
+						<div class="car-body py-4">
+							<div class="car-info d-flex justify-content-between px-3">
 								<!-- First Flex Child -->
 								<div class="car-text">
-									<h6 class="font-weight-bold">CAR MAKER</h6>
-									<h6>MODEL</h6>
-								</div>
-								<!-- Second Flex Child -->
-								<h5 class="car-value align-self-center py-2 px-3">$
-									<span class="car-price">10,000</span>
-								</h5>
-							</div>
+									<h4 class="font-weight-bold inv-head-text">JAGUAR XF</h4>
+									<div class="inv-line-1 inv-head-text"></div>
+									<div class="inv-line-2 inv-head-text"></div>
+								</div>                   
+							</div>     
 						</div>
 						<!-- End Card Body -->
-						<div class="card-footer d-flex justify-content-between">
-							<p><span><i class="fas fa-car"></i></span>SEDAN</p>
-							<p><span><i class="fas fa-cogs"></i></span>AUTOMATIC</p>
-							<p><span><i class="fas fa-gas-pump"></i></span>50</p>
+						<div class="inv-img-container d-flex">
+							<img src="img/car-img/jaguar-xf.jpg" class="card-img-top inv-car-img" alt="">
+						</div>
+						<div class="container py-2">
+							<div class="row px-2">
+								<div class=" col-4 p-2">
+									<div class="inv-check-card text-center py-2">
+										<div class="inv-check-icon py-2">
+											<i class="fas fa-dot-circle"></i>
+										</div>
+										<h6 class="inv-check-text">BLACK</h6>
+									</div>
+								</div>
+								<div class=" col-4 p-2">
+									<div class="inv-check-card text-center py-2">
+										<div class="inv-check-icon py-2">
+											<i class="fas fa-tachometer-alt"></i>
+										</div>
+										<h6 class="inv-check-text">19.3 MPL</h6>
+									</div>
+								</div>
+								<div class=" col-4 p-2">
+									<div class="inv-check-card text-center py-2">
+										<div class="inv-check-icon py-2">
+											<i class="fas fa-fire-alt"></i>
+										</div>
+										<h6 class="inv-check-text">DIESEL</h6>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<div class="card-footer d-flex justify-content-center py-4">
+							<a href="inventory.php" class="inv-car-value text-center py-2 px-3">  	Rs. 54L
+							</a>    
 						</div>
 					</div>
 				</div>
 				<!-- End Single Car -->
-			
-				</div>
+			</div>
 		</div>
 	</section>
 	<!-- End Inventory Section -->
@@ -455,7 +615,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<!-- Question Second -->
+					<!-- Question Third -->
 					<div class="col-12 my-2 col-md-4 d-flex justify-content-center question-3 p-4">
 						<!-- First Flexbox Child -->
 						<div class="question-icon mr-3">
