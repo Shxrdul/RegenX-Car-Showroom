@@ -110,7 +110,7 @@ $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
                         </div>     
                     </div>
                     <!-- End Card Body -->
-                    <div class="inv-img-container d-flex">
+                    <div class="inv-img-container d-flex p-2">
                         <img src="<?php echo $product['img']?>" class="card-img-top inv-car-img" alt="">
                     </div>
                     <div class="container py-2">

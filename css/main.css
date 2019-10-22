@@ -394,7 +394,6 @@ body{
 }
 .inv-car-img{
 	border-radius: 5%!important;
-	margin: 1rem;
 	/* box-shadow: 0px 0px 5px var(--transparentBlack); */
 }
 .inv-car-value{
