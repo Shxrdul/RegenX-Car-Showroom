@@ -58,10 +58,10 @@ $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
             </li>	
             <li class="nav-item"> 
                 <a href="sell.html" class="nav-link">SELL YOUR CAR</a>
-            </li>
-			<li class="nav-item"> 
-				<a href="admin.html" class="nav-link">ADMIN</a>
-			</li>		
+            </li>	
+            <li class="nav-item"> 
+                <a href="admin.php" class="nav-link">ADMIN/a>
+            </li>	
             </ul> 
             <!--Social Icons-->
             <div class="nav-icons d-none d-lg-block"></div>

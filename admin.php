@@ -1,7 +1,41 @@
+
+<?php
+session_start();
+$errors = array();
+include_once("includes/config.php");
+if(isset($_POST['Submit'])){
+	$username = mysqli_real_escape_string($db, $_POST['username']);
+    $password = mysqli_real_escape_string($db, $_POST['password']);
+    if (empty($username)) {
+  	array_push($errors, "Username is required");
+  }
+  if (empty($password)) {
+  	array_push($errors, "Password is required");
+  }
+  if (count($errors) == 0) {
+  	$password = md5($password);
+  	$query = "SELECT * FROM admin_table WHERE username='$username' AND pwd='$password'";
+  	$results = mysqli_query($db, $query);
+  	if (mysqli_num_rows($results) == 1) {
+  	  $_SESSION['username'] = $username;
+  	  $_SESSION['success'] = "You are now logged in";
+  	  header('location: panel.php');
+  	}else {
+  		array_push($errors, "Wrong username/password combination");
+		$message="Wrong username/password combination";
+		echo"<script type='text/javascript'>alert('$message');</script>";
+  	}
+  }
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contact | RegenX</title>
+    <title>Admin | RegenX</title>
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!--main CSS-->
@@ -49,7 +83,7 @@
             <a href="sell.html" class="nav-link">SELL YOUR CAR</a>
         </li>
         <li class="nav-item"> 
-            <a href="admin.html" class="nav-link">ADMIN</a>
+            <a href="admin.php" class="nav-link">ADMIN</a>
         </li>		
         </ul> 
         <!--Social Icons-->
@@ -75,7 +109,7 @@
         <div class="container"> 
                 <div class="d-flex justify-content-center py-5"> 
                     <div class="col-sm-6 col-lg-3 text-center my-3">
-                        <h1 class="font-weight-bolder align-self-center mx-1">PANEL</h1>
+                        <h1 class="font-weight-bolder align-self-center mx-1">ADMIN</h1>
                         <div class="brand-underline"></div>	
                     </div>		
                 </div>
@@ -104,7 +138,7 @@
 <section id="message">
     <div class="message p-4">
         <div class="container">
-        <form name="contact_form" action="includes/contactadd.inc.php" method="POST" onsubmit="return validate(contact_form)">
+        <form name="admin_form" action="admin.php" method="POST" onsubmit="return validate(admin_form)">
             <div class="row px-3">
                 <div class="col-6 mx-auto my-3">
                     <input type="text" id="text" name="username" placeholder="Username" class="form-control form-control-lg">
@@ -118,7 +152,8 @@
             </div>
             <div class="row">
                 <div class="col my-3 text-center">
-                    <button type="submit" class="btn msg-btn">LOGIN</button>
+                  <!-- <input type="hidden" name="id" value=<?php echo $_GET['id'];?>> -->
+                    <button type="submit" name="Submit" class="btn msg-btn">LOGIN</button>
                 </div>
             </div>
         </div>
