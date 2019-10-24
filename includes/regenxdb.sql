@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2019 at 06:23 PM
+-- Generation Time: Oct 24, 2019 at 07:34 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -21,6 +21,24 @@ SET time_zone = "+00:00";
 --
 -- Database: `regenxdb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin_table`
+--
+
+CREATE TABLE `admin_table` (
+  `username` varchar(50) COLLATE utf8_bin NOT NULL,
+  `pwd` varchar(50) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `admin_table`
+--
+
+INSERT INTO `admin_table` (`username`, `pwd`) VALUES
+('shardul', 'shardul');
 
 -- --------------------------------------------------------
 
@@ -72,9 +90,7 @@ INSERT INTO `car_product` (`id`, `carname`, `img`, `mileage`, `price`, `fueltype
 (32, 'Porsche Cayenne', 'img\\car-img\\porche cayenne.jpg', 11, '1.92CR', 'Petrol', 'White'),
 (33, 'Toyota Supra', 'img\\car-img\\Toyota -supra.jpg', 22, '40.65L', 'Gasoline', 'Tungsten Silver'),
 (34, 'Toyota Yaris', 'img\\car-img\\toyota_yaris.jpg', 18, '14.07L', 'Petrol', 'Red, Phantom'),
-(35, 'Toyota Fortuner', 'img\\car-img\\toyota-fortuner.jpg', 15, '33.25L', 'Petrol', 'Phantom Brown'),
-(36, 'Volkswagon Polo', 'img\\car-img\\volkswagon-Polo.jpg', 21, '9.88L', 'Diesel', 'Carbon Steel'),
-(37, 'Volkswagon Vento', 'img\\car-img\\volkswagon-vento.jpeg', 22, '14.49L', 'Diesel', 'Lapiz Blue');
+(35, 'Toyota Fortuner', 'img\\car-img\\toyota-fortuner.jpg', 15, '33.25L', 'Petrol', 'Phantom Brown');
 
 -- --------------------------------------------------------
 
@@ -89,6 +105,13 @@ CREATE TABLE `contact_table` (
   `subject` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `message` char(200) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `contact_table`
+--
+
+INSERT INTO `contact_table` (`name`, `phoneno`, `emailid`, `subject`, `message`) VALUES
+('Shardul Doke', 7303738899, 'shardul.doke17@siesgst.ac.in', 'XYZLMNO', 'sakfhsudgyifkhdasgyifaudhsfiga');
 
 -- --------------------------------------------------------
 
@@ -110,6 +133,13 @@ CREATE TABLE `sell_table` (
   `mile` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `message` varchar(200) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `sell_table`
+--
+
+INSERT INTO `sell_table` (`name`, `phoneno`, `emailid`, `year`, `make`, `model`, `intcol`, `extcol`, `own`, `insc`, `mile`, `message`) VALUES
+('Shardul Doke', 7303738899, 'shardul.doke17@siesgst.ac.in', 2019, 'Jaguar', 'XF', 'Blue', 'Blue', 1, '2020', '30MPL', 'Good condition');
 
 --
 -- Indexes for dumped tables
@@ -141,7 +171,7 @@ ALTER TABLE `sell_table`
 -- AUTO_INCREMENT for table `car_product`
 --
 ALTER TABLE `car_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
