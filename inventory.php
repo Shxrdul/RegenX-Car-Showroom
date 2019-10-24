@@ -58,7 +58,10 @@ $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
             </li>	
             <li class="nav-item"> 
                 <a href="sell.html" class="nav-link">SELL YOUR CAR</a>
-            </li>		
+            </li>	
+            <li class="nav-item"> 
+                <a href="admin.php" class="nav-link">ADMIN </a>
+            </li>	
             </ul> 
             <!--Social Icons-->
             <div class="nav-icons d-none d-lg-block"></div>
@@ -142,9 +145,9 @@ $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
                         </div>    
                     </div>		  
 	                <div class="card-footer d-flex justify-content-center py-4">
-	                    <a href="" class="inv-car-value text-center py-2 px-3">   
+	                    <div class="inv-car-value text-center py-2 px-3">   
 	                            Rs. <?php echo $product['price']?>
-	                    </a>    
+	                    </div>    
 	                </div>
                 </div>
             </div>
