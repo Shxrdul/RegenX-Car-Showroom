@@ -52,7 +52,7 @@
 				 $fileDestination = '../img/sell-img/'.$fileName;
 				 // $fileDestination2 = '../img/sell-img/'.$fileName2;
 				 // $fileDestination3 = '../img/sell-img/'.$fileName3;
-				 // move_uploaded_file($fileTmpName, $fileDestination);
+				    move_uploaded_file($fileTmpName, $fileDestination);
 				 // move_uploaded_file($fileTmpName, $fileDestination2);
 				 // move_uploaded_file($fileTmpName, $fileDestination3);
 				 $sql = "INSERT INTO sell_table(name,phoneno,emailid,year,make,model,intcol,extcol,own,mile,message,img) VALUES ('$name','$phoneno','$emailid','$year','$make','$model','$intcol','$extcol','$own','$mile','$message','$img')";
