@@ -107,7 +107,8 @@ $result = mysqli_query($mysqli, "SELECT * FROM sell_table");
     <tr>
     <th>Name</th> <th>Mobile</th> <th>Email</th> <th>Year</th>
     <th>Make</th> <th>Model</th> <th>IntCol</th> <th>ExtCol</th>
-    <th>Owners</th> <th>Insc</th> <th>Mileage</th> <th>Message</th> <th>Manage</th>
+    <th>Owners</th> <th>Mileage</th> <th>Message</th><th>Image</th><th>Manage</th>
+
     </tr>
     </thead>
     <?php  
@@ -122,10 +123,10 @@ $result = mysqli_query($mysqli, "SELECT * FROM sell_table");
         echo "<td>".$user_data['intcol']."</td>";
         echo "<td>".$user_data['extcol']."</td>";
         echo "<td>".$user_data['own']."</td>";
-        echo "<td>".$user_data['insc']."</td>";
+
         echo "<td>".$user_data['mile']."</td>";
         echo "<td>".$user_data['message']."</td>";
-        
+        echo "<td>".'<img src="'.$user_data['img'].'"height="150" width="150">'."<td>";
         echo "<td><a href='transfer.php?phoneno=$user_data[phoneno]'>Bought</a></td></tr>";        
     }
     ?>

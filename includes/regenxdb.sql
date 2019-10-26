@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 24, 2019 at 07:34 AM
+-- Generation Time: Oct 25, 2019 at 01:12 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -29,9 +29,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin_table` (
-  `username` varchar(50) COLLATE utf8_bin NOT NULL,
-  `pwd` varchar(50) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+  `username` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `pwd` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `admin_table`
@@ -66,7 +67,7 @@ INSERT INTO `car_product` (`id`, `carname`, `img`, `mileage`, `price`, `fueltype
 (8, 'Aston Martin DB 11', 'img\\car-img\\astonmartin-db11.jpg', 12, '4.99CR', 'Petrol', 'Divine Red'),
 (9, 'Audi A4', 'img\\car-img\\audi -A4.jpg', 19, '40.84L', 'Pertrol/ Diesel', 'Moonshine Blue'),
 (10, 'Audi  A1', 'img\\car-img\\audi- A1.jpg', 18, '50.94L', 'Pertrol/ Diesel', 'Shell White'),
-(11, 'Audi A3 Sportback E-tron', 'img\\car-img\\Audi a3 etron.jpg', 22, '1.5CR', 'Electric', 'Glacier White Color'),
+(11, 'Audi A3 Sportback E-tron', 'img\\car-img\\Audi a3 etron.jpg', 22, '1.5CR', 'Electric', 'Glacier White'),
 (12, 'Bentley Mulsanne', 'img\\car-img\\bentley mulsanne.jpg', 10, '5.55CR', 'Petrol', 'Azure Purple'),
 (13, 'Bentley Continental-GT', 'img\\car-img\\bentley-continental-gt.jpg', 10, '3.57CR', 'Petrol', 'Amber Burnt Oak'),
 (14, 'Bentley Flying Spur', 'img\\car-img\\bentley-flying-spur.jpg', 10, '3.21CR', 'Petrol', 'Dark Cashmere'),
@@ -80,9 +81,9 @@ INSERT INTO `car_product` (`id`, `carname`, `img`, `mileage`, `price`, `fueltype
 (22, 'Jaguar F-Type', 'img\\car-img\\jaguar f type.jpg', 13, '2.21CR', 'Petrol', 'Corris Grey '),
 (23, 'Jaguar XF', 'img\\car-img\\jaguar-xf.jpg', 19, '54.37L', 'Petrol/Diesel', 'Napoli Black'),
 (24, 'Lamborghini Huracan Evo', 'img\\car-img\\lamborghini hurracan evo.jpg', 7, '3.73CR', 'Petrol', 'Pearl White'),
-(25, 'Lamborghini Huracan Spyder', 'img\\car-img\\lamborghini hurracan spyder.jpg', 11, '3.97CR', 'Petrol', 'Midnight Black'),
+(25, 'Lamborghini Spyder', 'img\\car-img\\lamborghini hurracan spyder.jpg', 11, '3.97CR', 'Petrol', 'Midnight Black'),
 (26, 'Lamorghini Avendator', 'img\\car-img\\lamorghini avendator.jpg', 8, '6.25CR', 'Petrol', 'Giallo Spica'),
-(27, 'Mercedes-AMG GT', 'img\\car-img\\Mercedes benz -AMG GT C.jpg', 13, '2,32,00,00', 'Petrol', 'Black'),
+(27, 'Mercedes-AMG GT', 'img\\car-img\\Mercedes benz -AMG GT C.jpg', 13, '2.32CR', 'Petrol', 'Black'),
 (28, 'Mercedez Benz-C', 'img\\car-img\\mercedez benz-C class.jpg', 12, '75L', 'Petrol', 'Selenite Grey'),
 (29, 'Mercedez Benz-E', 'img\\car-img\\mercedez benz-E class.jpg', 11, '1.05CR', 'Petrol', 'Iridium Silver'),
 (30, 'Porche Maccan', 'img\\car-img\\porche macan.jpg', 11, '85.0L', 'Petrol', 'Mamba Green'),
@@ -90,7 +91,10 @@ INSERT INTO `car_product` (`id`, `carname`, `img`, `mileage`, `price`, `fueltype
 (32, 'Porsche Cayenne', 'img\\car-img\\porche cayenne.jpg', 11, '1.92CR', 'Petrol', 'White'),
 (33, 'Toyota Supra', 'img\\car-img\\Toyota -supra.jpg', 22, '40.65L', 'Gasoline', 'Tungsten Silver'),
 (34, 'Toyota Yaris', 'img\\car-img\\toyota_yaris.jpg', 18, '14.07L', 'Petrol', 'Red, Phantom'),
-(35, 'Toyota Fortuner', 'img\\car-img\\toyota-fortuner.jpg', 15, '33.25L', 'Petrol', 'Phantom Brown');
+(35, 'Toyota Fortuner', 'img\\car-img\\toyota-fortuner.jpg', 15, '33.25L', 'Petrol', 'Phantom Brown'),
+(36, 'Volkswagon', 'img/car-img/volkswagon-Polo.jpg', 21, '0L', 'Diesel', 'Carbon'),
+(46, 'Porsche Taycan', 'img/car-img/porche cayenne.jpg', 30, '3.34CR', 'Petrol', 'Blue');
+
 
 -- --------------------------------------------------------
 
@@ -111,7 +115,10 @@ CREATE TABLE `contact_table` (
 --
 
 INSERT INTO `contact_table` (`name`, `phoneno`, `emailid`, `subject`, `message`) VALUES
-('Shardul Doke', 7303738899, 'shardul.doke17@siesgst.ac.in', 'XYZLMNO', 'sakfhsudgyifkhdasgyifaudhsfiga');
+
+('ShardulD', 8234567890, 'shardyl.D@gmail.com', 'Booking Car', 'I would like to test drive your car'),
+('Siddharth Byale', 8819017105, 'sidddharth.byale@gmail.com', 'Price', 'I wanted to ask if prices are negotiable?'),
+('Piyush', 9819017109, 'piyush872@gmail.com', 'Drive', 'Test Drive timing?');
 
 -- --------------------------------------------------------
 
@@ -129,17 +136,18 @@ CREATE TABLE `sell_table` (
   `intcol` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `extcol` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `own` int(5) NOT NULL,
-  `insc` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `mile` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `message` varchar(200) COLLATE utf8_unicode_ci NOT NULL
+  `message` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `img` varchar(200) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `sell_table`
 --
 
-INSERT INTO `sell_table` (`name`, `phoneno`, `emailid`, `year`, `make`, `model`, `intcol`, `extcol`, `own`, `insc`, `mile`, `message`) VALUES
-('Shardul Doke', 7303738899, 'shardul.doke17@siesgst.ac.in', 2019, 'Jaguar', 'XF', 'Blue', 'Blue', 1, '2020', '30MPL', 'Good condition');
+INSERT INTO `sell_table` (`name`, `phoneno`, `emailid`, `year`, `make`, `model`, `intcol`, `extcol`, `own`, `mile`, `message`, `img`) VALUES
+('Siddharth Byale', 9819017105, 'siddharth.byale@gmail.com', 2019, 'Jaguar', 'CVF', 'Black', 'Black', 1, '30MPL', 'sfas', 'img/sell-img/aston-martin-rapide-amr-porsche-panamera.jpg');
+
 
 --
 -- Indexes for dumped tables
@@ -171,7 +179,7 @@ ALTER TABLE `sell_table`
 -- AUTO_INCREMENT for table `car_product`
 --
 ALTER TABLE `car_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

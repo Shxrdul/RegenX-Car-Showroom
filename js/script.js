@@ -134,12 +134,6 @@ function svalidate(myform){
 		document.getElementById('invalid_own').style.visibility = 'visible'; 
 		myform.message.focus();
 	}
-	if(myform.insc.value == "") 
-	{
-		flag  = 0;
-		document.getElementById('invalid_insc').style.visibility = 'visible'; 
-		myform.message.focus();
-	}
 	if(myform.mile.value == "") 
 	{
 		flag  = 0;
