@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin_table` (
+
   `username` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `pwd` varchar(100) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -94,6 +95,7 @@ INSERT INTO `car_product` (`id`, `carname`, `img`, `mileage`, `price`, `fueltype
 (36, 'Volkswagon', 'img/car-img/volkswagon-Polo.jpg', 21, '0L', 'Diesel', 'Carbon'),
 (46, 'Porsche Taycan', 'img/car-img/porche cayenne.jpg', 30, '3.34CR', 'Petrol', 'Blue');
 
+
 -- --------------------------------------------------------
 
 --
@@ -113,6 +115,7 @@ CREATE TABLE `contact_table` (
 --
 
 INSERT INTO `contact_table` (`name`, `phoneno`, `emailid`, `subject`, `message`) VALUES
+
 ('ShardulD', 8234567890, 'shardyl.D@gmail.com', 'Booking Car', 'I would like to test drive your car'),
 ('Siddharth Byale', 8819017105, 'sidddharth.byale@gmail.com', 'Price', 'I wanted to ask if prices are negotiable?'),
 ('Piyush', 9819017109, 'piyush872@gmail.com', 'Drive', 'Test Drive timing?');
@@ -144,6 +147,7 @@ CREATE TABLE `sell_table` (
 
 INSERT INTO `sell_table` (`name`, `phoneno`, `emailid`, `year`, `make`, `model`, `intcol`, `extcol`, `own`, `mile`, `message`, `img`) VALUES
 ('Siddharth Byale', 9819017105, 'siddharth.byale@gmail.com', 2019, 'Jaguar', 'CVF', 'Black', 'Black', 1, '30MPL', 'sfas', 'img/sell-img/aston-martin-rapide-amr-porsche-panamera.jpg');
+
 
 --
 -- Indexes for dumped tables

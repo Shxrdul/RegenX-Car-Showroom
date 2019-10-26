@@ -13,9 +13,11 @@ echo "<pre>";
 var_dump($row);
 echo "</pre>";
 
+
 $make=$row["make"]." ".$row["model"];
 $mileage="30";
 $img="img/car-img/porche cayenne.jpg";
+
 $price="3.34CR";
 $fueltype="Petrol";
 $colour="Blue";
