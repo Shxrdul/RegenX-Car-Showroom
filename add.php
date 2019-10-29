@@ -95,7 +95,7 @@
     <a class="btn msg-btn" href="panel.php">Go Back</a>
     </div>
 </div>
-<form action="add.php" method="post" name="form1">
+<form action="add.php" method="post" name="form1" enctype="multipart/form-data">
 <div class="row  justify-content-center">
     <div class="col-6 my-3">
         <h6>ID</h6>
@@ -134,10 +134,10 @@
 </div>
 <div class="row  justify-content-center">
     <div class="col-6 my-3">
-        <h6>Image</h6>
-        <input type="text" name="img" class="form-control form-control-lg">
-    </div>
-</div>
+        <h6>Car Image</h6>
+        <input type="file" name="file" >
+     </div>
+</div> 
 <div class="row p-4">
     <div class="col my-3 text-center">
     <input type="submit" name="Submit" value="Add" class="btn msg-btn">
@@ -173,22 +173,45 @@
 	if(isset($_POST['Submit'])) {
 		$id = $_POST['id'];
 		$carname = $_POST['carname'];
-        $img = $_POST['img'];
         $mileage = $_POST['mileage'];
         $price = $_POST['price'];
         $fueltype = $_POST['fueltype'];
         $colour = $_POST['colour'];
+        //Image Details
+        $file = $_FILES['file'];
+        $fileName = $_FILES['file']['name'];
+        $fileTmpName = $_FILES['file']['tmp_name'];
+        $fileType = $_FILES['file']['type'];
+        $fileError = $_FILES['file']['error'];
+        $img = 'img/car-img/'.$carname;
 		
 		// include database connection file
 		include_once("includes/config.php");
-				
+		//Checking jpeg and jpg 
+
+        $fileExt = explode('.', $fileName);
+        $fileActualExt = strtolower(end($fileExt));
+        $allowed = array('jpg','jpeg');
+
+        if(in_array($fileActualExt, $allowed)) {
+            if($fileError === 0){
+                 $fileDestination = 'img/car-img/'.$carname;
+                    move_uploaded_file($fileTmpName, $fileDestination);		
+
 		// Insert user data into table
 		$result = mysqli_query($mysqli, "INSERT INTO car_product(id,carname,img,mileage,price,fueltype,colour) VALUES('$id','$carname','$img','$mileage','$price','$fueltype','$colour')");
 		
         // Show message when user added
-        $message = "User added successfully.";
+        $message = "Entry added successfully.";
         echo "<script type='text/javascript'>alert('$message');</script>";
-	}
+            }
+
+            else {
+                $message = "Error while uploading image";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+	   }
+    }
 	?>
 <!-- End Buttons -->
 
