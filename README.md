@@ -1,7 +1,7 @@
 # RegenX-Car-Showroom
 
 Project based on:
-HTML CSS
+HTML CSS JS
 PHP AJAX
 BOOTSTRAP
 FONT AWESOME
